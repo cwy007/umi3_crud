@@ -21,7 +21,7 @@ const { Option } = Select;
 
 const addCourse = () => {
   const [typeList, setTypeList] = useState<AddData[]>([] as AddData[]);
-  const { id } = useParams();
+  const { id } = useParams<{id?: any}>();
   const [form] = Form.useForm();
   useEffect(() => {
     getTypeDatas();

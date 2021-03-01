@@ -32,7 +32,7 @@ const index = (props: { children: React.ReactNode }) => {
           selectedKeys={getMenuSeletedKeys(location.pathname)}
         >
           <Menu.Item key="/course">
-            <Link to="/course">课程记录</Link>
+            <Link to="/course">课程列表</Link>
           </Menu.Item>
           <Menu.Item key="/about">
             <Link to="/about">关于我们</Link>
@@ -51,7 +51,8 @@ const index = (props: { children: React.ReactNode }) => {
           {props.children}
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-          umi3-demo created by 米修在线
+          umi3-demo created by &nbsp;
+          <a href="https://ke.qq.com/course/2555454" target="_blank">米修在线</a>
         </Footer>
       </Layout>
     </Layout>

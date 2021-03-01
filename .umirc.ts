@@ -39,6 +39,7 @@ export default defineConfig({
         {
           path: '/about',
           component: './About',
+          title: '关于我们'
         },
       ],
     },

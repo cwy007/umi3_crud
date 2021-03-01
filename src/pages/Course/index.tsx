@@ -46,13 +46,7 @@ const index = () => {
       title: '课程地址',
       dataIndex: 'address',
       key: 'address',
-      render: (text: string) => (
-        <>
-          <a target="blank" href={text}>
-            查看课程
-          </a>
-        </>
-      ),
+      render: (text: string) => ( <a target="_blank" href={text}>查看课程</a> ),
     },
     {
       title: '操作',
@@ -89,10 +83,8 @@ const index = () => {
   };
 
   return (
-    <div>
-      <Button type="primary" onClick={handleAdd}>
-        添加课程
-      </Button>
+    <>
+      <Button type="primary" onClick={handleAdd}>添加课程</Button>
       <Search
         placeholder="请输入搜索的课程名称"
         onSearch={handleSearch}
@@ -101,9 +93,9 @@ const index = () => {
       <Table
         columns={columns}
         dataSource={datas}
-        rowKey={(datas: { id: string }) => datas.id}
+        rowKey={(data: { id: string }) => data.id}
       />
-    </div>
+    </>
   );
 };
 
